@@ -19,6 +19,6 @@ class HelloControllerTest {
     void shouldReturnHelloJenkins() throws Exception {
         mockMvc.perform(get("/hello"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("Hello Jenkins!"));
+                .andExpect(content().string("Hello Pratik!"));
     }
 }

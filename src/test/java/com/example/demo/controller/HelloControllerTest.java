@@ -26,5 +26,13 @@ class HelloControllerTest {
     void shouldReturnTestEndpoint() throws Exception {
         mockMvc.perform(get("/test"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("Test endpoint is working!"));}
+                .andExpect(content().string("Test endpoint is working!"));
+    }
+
+    @Test
+    void shouldReturnHealthEndpoint() throws Exception {
+        mockMvc.perform(get("/health"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("Application is healthy!"));
+    }
 }

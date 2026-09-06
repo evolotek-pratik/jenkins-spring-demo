@@ -21,4 +21,10 @@ class HelloControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string("Hello Trail Jenkins!"));
     }
+
+    @Test
+    void shouldReturnTestEndpoint() throws Exception {
+        mockMvc.perform(get("/test"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("Test endpoint is working!"));}
 }

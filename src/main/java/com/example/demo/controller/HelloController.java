@@ -10,4 +10,9 @@ public class HelloController {
     public String hello() {
         return "Hello Trail Jenkins!";
     }
+
+    @GetMapping("/test")
+    public String test() {
+        return "Test endpoint is working!";
+    }
 }
